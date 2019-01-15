@@ -10,7 +10,7 @@
             <RowDefinition Height="25*"/>
             <RowDefinition Height="318*"/>
         </Grid.RowDefinitions>
-        <DockPanel Height="25" VerticalAlignment="Top" Background="#FF1D2125" Margin="0,0,-0.333,0">
+        <DockPanel x:Name="dpToolBar" Height="25" VerticalAlignment="Top" Background="#FF1D2125" Margin="0,0,-0.333,0" MouseLeftButtonDown="DragWindow">
             <Button x:Name="btnFile" Content="File" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Style="{DynamicResource DarkButton}"/>
             <Button x:Name="btnSettings" Content="Settings" Click="OpenSettingsWindow" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Style="{DynamicResource DarkButton}"/>
 

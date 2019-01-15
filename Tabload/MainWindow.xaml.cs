@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace Tabload
 {
@@ -7,7 +8,7 @@ namespace Tabload
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,6 +28,11 @@ namespace Tabload
         private void BtnMinimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        private void DragWindow(object sender, RoutedEventArgs e)
+        {
+                DragMove();
         }
     }
 }
