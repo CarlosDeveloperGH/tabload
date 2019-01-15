@@ -29,5 +29,6 @@
         </DockPanel>
         <Button x:Name="btnStartLoading" Content="Load Table!" Margin="210,250,210,40" FontSize="15" BorderThickness="3" Height="auto" Width="auto" Style="{DynamicResource DarkButton}" Grid.Row="1"/>
         <TextBox Height="23" Margin="10,291.667,10.333,0" Grid.Row="1" TextWrapping="Wrap" Text="Enter URL here" VerticalAlignment="Top" Style="{DynamicResource DarkTextBox}"/>
+        <Image Margin="210,84.667,210.333,140" Grid.Row="1" Source="Res/Check_icon.svg.png"/>
     </Grid>
 </Window>
