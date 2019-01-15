@@ -1,0 +1,3 @@
+﻿Dark-Main:			#282c34
+Dark-Secondary:		#1d2125
+Light-Main:			#d7dae0
