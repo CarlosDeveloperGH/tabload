@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HtmlAgilityPack;
+﻿using System.Net;
 
 namespace Tabload.Net
 {
-    abstract class NetLoader 
+    class NetLoader
     {
-        private void _WebScraper(string url, string nodeid)
+        protected string _webScraperStr(string url)
         {
-            HtmlDocument doc = new HtmlDocument();
-            doc.LoadHtml($@"{url}");
+            using (WebClient client = new WebClient())
+            {
+                string doc = client.DownloadString($@"{url}");
+                return doc;
+            }
+        }
 
-            HtmlNode node = doc.DocumentNode.SelectNodes($@"/div[@id='{nodeid}']").First();
+        protected void _webScraperFile(string url, string path)
+        {
+            //TODO implement use of this
+            using (WebClient client = new WebClient())
+            {
+                client.DownloadFile($@"{url}", $@"{path}");
+            }
         }
     }
 }

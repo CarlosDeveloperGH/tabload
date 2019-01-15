@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 namespace Tabload.Helper
 {
-    class HtmlCsvExporter
+    public class HtmlCsvExporter
     {
         private readonly HtmlTable _table;
 
