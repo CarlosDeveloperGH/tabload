@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Tabload")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("RefImage")]
+[assembly: AssemblyCompany("Noël Krähenbühl")]
 [assembly: AssemblyProduct("Tabload")]
-[assembly: AssemblyCopyright("Copyright © RefImage 2019")]
+[assembly: AssemblyCopyright("MIT Licence")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,3 +53,5 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("en")]
+
