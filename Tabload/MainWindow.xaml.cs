@@ -18,5 +18,15 @@ namespace Tabload
             Views.Settings _settingsWindow = new Views.Settings(); ;
             _settingsWindow.Show();
         }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }
