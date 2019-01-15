@@ -6,17 +6,32 @@ namespace Tabload.Helper
 {
     class TableHelper : Net.NetLoader
     {
-        public string _extractTable(string url)
+        private string _extractTable(string url)
         {
-            int firstIndex;
-            int lastIndex;
+            int startIndex, endIndex, lenght;
             string doc = _webScraperStr($@"{url}");
 
             //Get the beginning and end of the table
-            firstIndex = doc.IndexOf("<table>");
-            lastIndex = doc.IndexOf("</table>");
-            doc = doc.Substring(firstIndex);
+            startIndex = doc.IndexOf("<table>");
+            endIndex = doc.IndexOf("</table>");
+            lenght = endIndex - startIndex + 1;
+
+            //Cut the string
+            doc = doc.Substring(startIndex, lenght);
             return doc;
+        }
+        private void _createTableArray(string htmlTable)
+        {
+            //Create 2 Dimensional Array [Row,Cell]
+            string[,] tableArray = new string[,] { };
+            //TODO
+
+        }
+        private HtmlTable _createTableObj()
+        {
+            HtmlTable table = new HtmlTable();
+            //TODO
+            return table;
         }
 
     }
