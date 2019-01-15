@@ -7,16 +7,16 @@
         mc:Ignorable="d" Height="350" Width="525" WindowStyle="None" Background="#FF282C34">
     <Grid>
         <DockPanel Height="25" VerticalAlignment="Top" Background="#FF1D2125">
-            <Button Content="File" Width="70" HorizontalAlignment="Left" Background="#FF1D2125" BorderBrush="{x:Null}" Margin="0,0,0,0.333" Foreground="#FFD7DAE0" />
-            <Button Content="Settings" Click="OpenSettingsWindow" Width="70" HorizontalAlignment="Left" Background="#FF1D2125" BorderBrush="{x:Null}" Margin="0,0,0,0.333" Foreground="#FFD7DAE0"/>
+            <Button x:Name="btnFile" Content="File" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Foreground="#FFD7DAE0" Style="{DynamicResource DarkButton}"/>
+            <Button x:Name="btnSettings" Content="Settings" Click="OpenSettingsWindow" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Foreground="#FFD7DAE0" Style="{DynamicResource DarkButton}"/>
 
             <Grid Width="50" Margin="0,0,0,0.333" HorizontalAlignment="Right">
-                <Button x:Name="btnMinimize" BorderBrush="{x:Null}" Margin="0,0,25,0" Foreground="{x:Null}" Click="BtnMinimize_Click" >
+                <Button x:Name="btnMinimize" BorderBrush="{x:Null}" Margin="0,0,25,0" Foreground="{x:Null}" Click="BtnMinimize_Click" Style="{DynamicResource DarkButton}">
                     <Button.Background>
                         <ImageBrush ImageSource="Res/Minimize Button.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnClose" HorizontalAlignment="Right" BorderBrush="{x:Null}" Margin="0,0,0,0.333" Foreground="{x:Null}" Width="25" Click="BtnClose_Click" >
+                <Button x:Name="btnClose" HorizontalAlignment="Right" BorderBrush="{x:Null}" Margin="0,0,0,0.333" Foreground="{x:Null}" Width="25" Click="BtnClose_Click" Style="{DynamicResource DarkButton}">
                     <Button.Background>
                         <ImageBrush ImageSource="Res/Closing Button.png" Stretch="Uniform"/>
                     </Button.Background>
