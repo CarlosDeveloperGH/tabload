@@ -4,24 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tabload"
-        mc:Ignorable="d" Height="350" Width="525" WindowStyle="None" Background="#FF282C34">
+        mc:Ignorable="d" Height="350" Width="525" WindowStyle="None" Background="#FF282C34" ResizeMode="NoResize">
     <Grid>
-        <DockPanel Height="25" VerticalAlignment="Top" Background="#FF1D2125">
-            <Button x:Name="btnFile" Content="File" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Foreground="#FFD7DAE0" Style="{DynamicResource DarkButton}"/>
-            <Button x:Name="btnSettings" Content="Settings" Click="OpenSettingsWindow" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Foreground="#FFD7DAE0" Style="{DynamicResource DarkButton}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="318*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Height="25" VerticalAlignment="Top" Background="#FF1D2125" Margin="0,0,-0.333,0">
+            <Button x:Name="btnFile" Content="File" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Style="{DynamicResource DarkButton}"/>
+            <Button x:Name="btnSettings" Content="Settings" Click="OpenSettingsWindow" Width="70" HorizontalAlignment="Left" Margin="0,0,0,0.333" Style="{DynamicResource DarkButton}"/>
 
             <Grid Width="50" Margin="0,0,0,0.333" HorizontalAlignment="Right">
                 <Button x:Name="btnMinimize" BorderBrush="{x:Null}" Margin="0,0,25,0" Foreground="{x:Null}" Click="BtnMinimize_Click" Style="{DynamicResource DarkButton}">
                     <Button.Background>
-                        <ImageBrush ImageSource="Res/Minimize Button.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="Res/Minimize Button.png" Stretch="None"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="btnClose" HorizontalAlignment="Right" BorderBrush="{x:Null}" Margin="0,0,0,0.333" Foreground="{x:Null}" Width="25" Click="BtnClose_Click" Style="{DynamicResource DarkButton}">
                     <Button.Background>
-                        <ImageBrush ImageSource="Res/Closing Button.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="Res/Closing Button.png" Stretch="None"/>
                     </Button.Background>
                 </Button>
             </Grid>
         </DockPanel>
+        <Button x:Name="btnStartLoading" Content="Load Table!" Margin="210,250,210,40" FontSize="15" BorderThickness="3" Height="auto" Width="auto" Style="{DynamicResource DarkButton}" Grid.Row="1"/>
+        <TextBox Height="23" Margin="10,291.667,10.333,0" Grid.Row="1" TextWrapping="Wrap" Text="Enter URL here" VerticalAlignment="Top" Style="{DynamicResource DarkTextBox}"/>
     </Grid>
 </Window>
