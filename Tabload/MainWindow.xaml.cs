@@ -34,5 +34,15 @@ namespace Tabload
         {
                 DragMove();
         }
+        public void RemoveText(object sender, RoutedEventArgs e)
+        {
+            tbURL.Text = "";
+        }
+
+        public void AddText(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tbURL.Text))
+                tbURL.Text = "Enter URL here...";
+        }
     }
 }
