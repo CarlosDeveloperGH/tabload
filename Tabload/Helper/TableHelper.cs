@@ -28,7 +28,9 @@ namespace Tabload.Helper
             HtmlTable table = new HtmlTable();
             //Create 2 Dimensional Array [Row,Cell]
             string[,] tableArray = new string[,] { };
-            //Iterate through the table string, delete the converted cells from the string
+
+            //TODO delete the converted cells from the string.
+            //Iterate through the table string
             while(!String.IsNullOrWhiteSpace(htmlTableStr))
             {
                 //Initialisation
@@ -40,9 +42,10 @@ namespace Tabload.Helper
                 //create a substring of the tr
                 string tempString = htmlTableStr.Substring(startIndexTr, lenghtTr);
 
-                //count how many strings //TODO
+                //count how many strings 
                 int neededColumns = Regex.Matches(tempString, "<td>").Count;
 
+                //Iterate through the cells
                 for(int i = 0; i < neededColumns; i++)
                 {
                     //Initialisation
