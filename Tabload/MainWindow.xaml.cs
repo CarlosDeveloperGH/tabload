@@ -16,7 +16,7 @@ namespace Tabload
 
         private void OpenSettingsWindow(object sender, RoutedEventArgs e)
         {
-            Views.Settings _settingsWindow = new Views.Settings(); ;
+            Views.Settings _settingsWindow = new Views.Settings();
             _settingsWindow.Show();
         }
 
@@ -32,7 +32,7 @@ namespace Tabload
 
         private void DragWindow(object sender, RoutedEventArgs e)
         {
-                DragMove();
+            DragMove();
         }
         public void RemoveText(object sender, RoutedEventArgs e)
         {
