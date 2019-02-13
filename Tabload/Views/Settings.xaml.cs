@@ -17,7 +17,16 @@ namespace Tabload.Views
         }
         private void SaveChanges(object sender, RoutedEventArgs e)
         {
+            //TODO Close window after saving all settings
             Close();
+        }
+        private void Cancel(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        private void DragWindow(object sender, RoutedEventArgs e)
+        {
+            DragMove();
         }
     }
 }

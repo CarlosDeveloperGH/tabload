@@ -12,7 +12,8 @@
         Background="#282c34"
         ResizeMode="NoResize">
     <Grid>
-        <Label x:Name="lblTitle" Content="Settings" Height="25" Margin="0,0,0,425" Foreground="{DynamicResource Static.Light.Primary}" Background="{DynamicResource Static.Dark.Secondary}"/>
+        <Label x:Name="lblTitle" Content="Settings" Height="25" Margin="0,0,0,425" Foreground="{DynamicResource Static.Light.Primary}" Background="{DynamicResource Static.Dark.Secondary}" MouseLeftButtonDown="DragWindow"/>
+        <Button x:Name="btnCancel" Content="Cancel" Margin="0,350,0,0" Width="125" Height="25" Click="SaveChanges" Style="{DynamicResource DarkButton}"/>
         <Button x:Name="btnSaveChanges" Content="Save Changes" Margin="250,350,0,0" Width="125" Height="25" Click="SaveChanges" Style="{DynamicResource DarkButton}"/>
         <Label x:Name="lblInProgress" Content="This feature is coming soon" Margin="10,30,204,391" Foreground="{DynamicResource Static.Light.Primary}"/>
     </Grid>
